@@ -1,5 +1,5 @@
 {
-  "name": "a",
+  "name": "carwyapar-be",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -11,11 +11,11 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "@strapi/strapi": "4.21.0",
-    "@strapi/plugin-users-permissions": "4.21.0",
-    "@strapi/plugin-i18n": "4.21.0",
-    "@strapi/plugin-cloud": "4.21.0",
-    "pg": "8.8.0",
+    "@strapi/strapi": "4.21.1",
+    "@strapi/plugin-users-permissions": "4.21.1",
+    "@strapi/plugin-i18n": "4.21.1",
+    "@strapi/plugin-cloud": "4.21.1",
+    "mysql": "2.18.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
@@ -25,7 +25,7 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "2e0e53bd-f9e6-4495-827b-f07f3dd5e487"
+    "uuid": "f00d3f7e-a3f1-4766-be53-4d5cc2600940"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
