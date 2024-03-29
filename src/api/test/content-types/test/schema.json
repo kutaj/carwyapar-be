@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tests",
+  "info": {
+    "singularName": "test",
+    "pluralName": "tests",
+    "displayName": "Test",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Mytext": {
+      "type": "string"
+    },
+    "used_cars": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::usedcar.usedcar",
+      "inversedBy": "tests"
+    }
+  }
+}

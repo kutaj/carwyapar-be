@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "car_varinat_prices",
+  "info": {
+    "singularName": "car-varinat-price",
+    "pluralName": "car-varinat-prices",
+    "displayName": "CarVarinatPrice",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "VarinatShortName": {
+      "type": "string"
+    },
+    "Price": {
+      "type": "json"
+    },
+    "car_variants": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::carmodel.carmodel",
+      "inversedBy": "car_varinat_prices"
+    },
+    "VarinatName": {
+      "type": "string"
+    }
+  }
+}

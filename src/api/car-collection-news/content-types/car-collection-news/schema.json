@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "car_collections_news",
+  "info": {
+    "singularName": "car-collection-news",
+    "pluralName": "car-collections-news",
+    "displayName": "CarCollectionNews",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "titleslug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "uid": {
+      "type": "customField",
+      "options": {
+        "uuid-format": "^\\d{6}$"
+      },
+      "customField": "plugin::strapi-advanced-uuid.uuid"
+    },
+    "Tag": {
+      "type": "enumeration",
+      "enum": [
+        "First Car",
+        "Luxury"
+      ]
+    },
+    "editor": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

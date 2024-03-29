@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "offer_card_for_mobs",
+  "info": {
+    "singularName": "offer-card-for-mob",
+    "pluralName": "offer-card-for-mobs",
+    "displayName": "OfferCardForMob",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "paragraph": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "targetLink": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

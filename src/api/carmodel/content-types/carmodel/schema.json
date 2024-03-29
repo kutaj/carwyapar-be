@@ -1,0 +1,499 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carmodels",
+  "info": {
+    "singularName": "carmodel",
+    "pluralName": "carmodels",
+    "displayName": "CarVariant",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "modelname": {
+      "type": "string"
+    },
+    "Length": {
+      "type": "string"
+    },
+    "Width": {
+      "type": "string"
+    },
+    "Height": {
+      "type": "string"
+    },
+    "WheelBase": {
+      "type": "string"
+    },
+    "GroundClearance": {
+      "type": "string"
+    },
+    "TyreSize": {
+      "type": "string"
+    },
+    "Doors": {
+      "type": "integer"
+    },
+    "SeatingCapacity": {
+      "type": "integer"
+    },
+    "FuelType": {
+      "type": "enumeration",
+      "enum": [
+        "Diesel",
+        "Petrol",
+        "Electric",
+        "Hybrid",
+        "CNG"
+      ]
+    },
+    "MileageKMPL": {
+      "type": "string"
+    },
+    "EngineAndTransmission": {
+      "type": "enumeration",
+      "enum": [
+        "Engine And Transmission"
+      ],
+      "private": true,
+      "default": "Engine And Transmission"
+    },
+    "GeneralSpecifications": {
+      "type": "enumeration",
+      "enum": [
+        "General Specifications"
+      ],
+      "default": "General Specifications",
+      "private": true
+    },
+    "EngineType": {
+      "type": "string"
+    },
+    "Displacement": {
+      "type": "string"
+    },
+    "MaxPower": {
+      "type": "string"
+    },
+    "MaxTorque": {
+      "type": "string"
+    },
+    "NoOfCylinder": {
+      "type": "integer"
+    },
+    "TurboCharger": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "TransmissionType": {
+      "type": "enumeration",
+      "enum": [
+        "Automatic",
+        "Manual"
+      ]
+    },
+    "GearBox": {
+      "type": "integer"
+    },
+    "SteeringAndSuspension": {
+      "type": "enumeration",
+      "enum": [
+        "Steering And Suspension"
+      ],
+      "default": "Steering And Suspension",
+      "private": true
+    },
+    "PowerSteering": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "FrontSuspension": {
+      "type": "string"
+    },
+    "RearSuspension": {
+      "type": "string"
+    },
+    "Safety": {
+      "type": "enumeration",
+      "enum": [
+        "Safety"
+      ],
+      "default": "Safety",
+      "private": true
+    },
+    "FrontBrakes": {
+      "type": "enumeration",
+      "enum": [
+        "Disc",
+        "Drum",
+        "Ventilated Disc",
+        "Solid Disc"
+      ]
+    },
+    "RearBrakes": {
+      "type": "enumeration",
+      "enum": [
+        "Disc",
+        "Drum",
+        "Ventilated Disc",
+        "Solid Disc"
+      ]
+    },
+    "ABS": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "BrakeAssist": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "Airbags": {
+      "type": "integer"
+    },
+    "RearSeatbelts": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "TyrePressureMonitor": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "SpeedAlert": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "ChildSeatMount": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "FollowMeHomeHeadlamps": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "CentralLocking": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "CrashSensor": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "HillAssist": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "AntitheftAlarm": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "SpeedSensingDoorLock": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "OtherFeatures": {
+      "type": "string"
+    },
+    "Interior": {
+      "type": "enumeration",
+      "enum": [
+        "Interior"
+      ],
+      "private": true,
+      "default": "Interior"
+    },
+    "FrontPowerWindows": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "RearPowerWindows": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "Tachometer": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "ElectronicMultiTripmeter": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "FabricUpholstery": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "GloveCompartment": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "DigitalClock": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "DigitalOdometer": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "HeightAdjustableDriverSeat": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "AdditionalFeatures": {
+      "type": "text"
+    },
+    "RearSeatArmRest": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "Infotainment": {
+      "type": "enumeration",
+      "enum": [
+        "Infotainment"
+      ],
+      "default": "Infotainment",
+      "private": true
+    },
+    "Radio": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "AudioSystemRemoteControl": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "SpeakersFront": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "SpeakersRear": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "Integrated2DINAudio": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "USBAuxiliaryInput": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "BluetoothConnectivity": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "TouchScreen": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "TouchScreenSize": {
+      "type": "decimal"
+    },
+    "Connectivity": {
+      "type": "string"
+    },
+    "AndroidAuto": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "AppleCarPlay": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "NoofSpeakers": {
+      "type": "integer"
+    },
+    "car_collections": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::carcollection.carcollection",
+      "inversedBy": "car_models"
+    },
+    "BrandName": {
+      "type": "string"
+    },
+    "EmissionNorms": {
+      "type": "string"
+    },
+    "DriveType": {
+      "type": "string"
+    },
+    "TiltAdjust": {
+      "type": "string"
+    },
+    "car_varinat_prices": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::car-varinat-price.car-varinat-price",
+      "mappedBy": "car_variants"
+    },
+    "Weight": {
+      "type": "string"
+    },
+    "Exterior": {
+      "type": "enumeration",
+      "enum": [
+        "Exterior"
+      ],
+      "default": "Exterior",
+      "private": true
+    },
+    "AdjustableHeadlight": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "FogLightsFront": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "PowerRearViewMirror": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "RearWindowDefogger": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "AlloyWheels": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "AdditionalFeaturesExterior": {
+      "type": "text"
+    },
+    "AdditionalFeaturesInfotainment": {
+      "type": "text"
+    },
+    "AlloyWheelSize": {
+      "type": "string"
+    },
+    "price": {
+      "type": "json"
+    },
+    "uid": {
+      "type": "customField",
+      "customField": "plugin::strapi-advanced-uuid.uuid"
+    },
+    "modelnameslug": {
+      "type": "uid",
+      "targetField": "modelname"
+    }
+  }
+}

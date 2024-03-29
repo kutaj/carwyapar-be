@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carnews",
+  "info": {
+    "singularName": "car-news",
+    "pluralName": "carnews",
+    "displayName": "CarNews",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "titleslug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "byname": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "editor": {
+      "type": "richtext",
+      "required": true
+    },
+    "uid": {
+      "type": "customField",
+      "options": {
+        "uuid-format": "^\\d{6}$"
+      },
+      "customField": "plugin::strapi-advanced-uuid.uuid"
+    }
+  }
+}

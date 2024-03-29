@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "banner_for_webs",
+  "info": {
+    "singularName": "banner-for-web",
+    "pluralName": "banner-for-webs",
+    "displayName": "BannerForWeb",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "bannerimage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

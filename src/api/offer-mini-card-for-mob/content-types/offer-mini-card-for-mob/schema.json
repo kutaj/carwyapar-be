@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "offer_mini_card_for_mobs",
+  "info": {
+    "singularName": "offer-mini-card-for-mob",
+    "pluralName": "offer-mini-card-for-mobs",
+    "displayName": "OfferMiniCardForMob",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

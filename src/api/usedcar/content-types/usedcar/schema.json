@@ -1,0 +1,148 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usedcars",
+  "info": {
+    "singularName": "usedcar",
+    "pluralName": "usedcars",
+    "displayName": "UsedCar",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "brand": {
+      "type": "string"
+    },
+    "carname": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer"
+    },
+    "fueltype": {
+      "type": "string"
+    },
+    "ownership": {
+      "type": "string"
+    },
+    "registrationstate": {
+      "type": "string"
+    },
+    "registrationcity": {
+      "type": "string"
+    },
+    "carprice": {
+      "type": "decimal"
+    },
+    "mobilenumber": {
+      "type": "integer"
+    },
+    "tests": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::test.test",
+      "mappedBy": "used_cars"
+    },
+    "uid": {
+      "type": "customField",
+      "options": {
+        "uuid-format": ""
+      },
+      "customField": "plugin::strapi-advanced-uuid.uuid"
+    },
+    "frontImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "frontleftImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "backrightImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "backImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "interiorImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "odoreadingImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "kms": {
+      "type": "decimal"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "used_cars"
+    },
+    "vehicletypes": {
+      "type": "enumeration",
+      "enum": [
+        "Hatchback",
+        "Sedan",
+        "SUV",
+        "MUV",
+        "Luxury",
+        "Super Luxury",
+        "Convertible",
+        "Hybrid",
+        "Coupe",
+        "Pickup Truck",
+        "Minivan",
+        "Wagon",
+        "Sport Utilitie",
+        "Electric"
+      ]
+    },
+    "AvailableinState": {
+      "type": "string"
+    },
+    "AvailableinCity": {
+      "type": "string"
+    },
+    "TransmissionType": {
+      "type": "enumeration",
+      "enum": [
+        "Automatic",
+        "Manual"
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "used_car_dealer_ships",
+  "info": {
+    "singularName": "used-car-dealer-ship",
+    "pluralName": "used-car-dealer-ships",
+    "displayName": "UsedCarDealerShip",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ShowroomName": {
+      "type": "text"
+    },
+    "Address": {
+      "type": "text"
+    },
+    "MapLink": {
+      "type": "text"
+    },
+    "uid": {
+      "type": "customField",
+      "customField": "plugin::strapi-advanced-uuid.uuid"
+    },
+    "PhoneNumber": {
+      "type": "string"
+    },
+    "StateName": {
+      "type": "string"
+    },
+    "CityName": {
+      "type": "string"
+    },
+    "used_car_dealer_cities": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::used-car-dealer-city.used-car-dealer-city",
+      "inversedBy": "used_car_dealer_ships"
+    }
+  }
+}

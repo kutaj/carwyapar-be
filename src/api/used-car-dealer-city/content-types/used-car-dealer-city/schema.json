@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "used_car_dealer_cities",
+  "info": {
+    "singularName": "used-car-dealer-city",
+    "pluralName": "used-car-dealer-cities",
+    "displayName": "UsedCarDealerCity",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CityName": {
+      "type": "string"
+    },
+    "CityCode": {
+      "type": "string"
+    },
+    "used_car_dealer_states": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::used-car-dealer-state.used-car-dealer-state",
+      "inversedBy": "used_car_dealer_cities"
+    },
+    "used_car_dealer_ships": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::used-car-dealer-ship.used-car-dealer-ship",
+      "mappedBy": "used_car_dealer_cities"
+    }
+  }
+}

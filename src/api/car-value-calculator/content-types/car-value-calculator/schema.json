@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "car_value_calculators",
+  "info": {
+    "singularName": "car-value-calculator",
+    "pluralName": "car-value-calculators",
+    "displayName": "CarValueCalculator",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "car_brands": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::car-brand.car-brand",
+      "inversedBy": "car_value_calculators"
+    },
+    "PercievedReliability": {
+      "type": "decimal",
+      "default": 0
+    },
+    "AfterSalesSupport": {
+      "type": "decimal",
+      "default": 0
+    },
+    "YearlyMaintenance": {
+      "type": "decimal",
+      "default": 0
+    },
+    "MarketDemand": {
+      "type": "decimal",
+      "default": 0
+    },
+    "ConsumerTrust": {
+      "type": "decimal",
+      "default": 0
+    }
+  }
+}

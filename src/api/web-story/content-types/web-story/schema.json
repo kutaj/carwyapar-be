@@ -1,0 +1,983 @@
+{
+  "kind": "collectionType",
+  "collectionName": "web_stories",
+  "info": {
+    "singularName": "web-story",
+    "pluralName": "web-stories",
+    "displayName": "WebStory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FirstLayer": {
+      "type": "enumeration",
+      "enum": [
+        "First Layer"
+      ],
+      "default": "First Layer",
+      "private": true
+    },
+    "FirstLayerTitle": {
+      "type": "string"
+    },
+    "FirstLayerTitleAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "FirstLayerTitleAnimationDelay": {
+      "type": "decimal"
+    },
+    "FirstLayerTitleAnimationDuration": {
+      "type": "decimal"
+    },
+    "FirstLayerPara": {
+      "type": "text"
+    },
+    "FirstLayerParaAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "FirstLayerParaAnimationDelay": {
+      "type": "decimal"
+    },
+    "FirstLayerParaAnimationDuration": {
+      "type": "decimal"
+    },
+    "FirstLayerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "FirstLayerImageAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "FirstLayerImageAnimationDelay": {
+      "type": "decimal"
+    },
+    "FirstLayerImageAnimationDuration": {
+      "type": "decimal"
+    },
+    "FirstLayerTargetLink": {
+      "type": "string"
+    },
+    "FirstLayerAllTextColor": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "SecondLayer": {
+      "type": "enumeration",
+      "enum": [
+        "Second Layer"
+      ],
+      "default": "Second Layer",
+      "private": true
+    },
+    "SecondLayerTitle": {
+      "type": "string"
+    },
+    "SecondLayerTitleAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "SecondLayerTitleAnimationDuration": {
+      "type": "decimal"
+    },
+    "SecondLayerTitleAnimationDelay": {
+      "type": "decimal"
+    },
+    "SecondLayerPara": {
+      "type": "text"
+    },
+    "SecondLayerParaAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "SecondLayerParaAnimationDuration": {
+      "type": "decimal"
+    },
+    "SecondLayerParaAnimationDelay": {
+      "type": "decimal"
+    },
+    "SecondLayerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "SecondLayerImageAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "SecondLayerImageAnimationDuration": {
+      "type": "decimal"
+    },
+    "SecondLayerImageAnimationDelay": {
+      "type": "decimal"
+    },
+    "SecondLayerTargetLink": {
+      "type": "string"
+    },
+    "SecondLayerAllTextColor": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "ThirdLayer": {
+      "type": "enumeration",
+      "enum": [
+        "Third Layer"
+      ],
+      "default": "Third Layer",
+      "private": true
+    },
+    "ThirdLayerTitle": {
+      "type": "string"
+    },
+    "ThirdLayerTitleAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "ThirdLayerTitleAnimationDuration": {
+      "type": "decimal"
+    },
+    "ThirdLayerTitleAnimationDelay": {
+      "type": "decimal"
+    },
+    "ThirdLayerPara": {
+      "type": "text"
+    },
+    "ThirdLayerParaAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "ThirdLayerParaAnimationDuration": {
+      "type": "decimal"
+    },
+    "ThirdLayerParaAnimationDelay": {
+      "type": "decimal"
+    },
+    "ThirdLayerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ThirdLayerImageAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "ThirdLayerImageAnimationDuration": {
+      "type": "decimal"
+    },
+    "ThirdLayerImageAnimationDelay": {
+      "type": "decimal"
+    },
+    "ThirdLayerTargetLink": {
+      "type": "string"
+    },
+    "ThirdLayerAllTextColor": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "FourthLayer": {
+      "type": "enumeration",
+      "enum": [
+        "Fourth Layer"
+      ],
+      "default": "Fourth Layer",
+      "private": true
+    },
+    "FourthLayerTitle": {
+      "type": "string"
+    },
+    "FourthLayerTitleAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "FourthLayerTitleAnimationDuration": {
+      "type": "decimal"
+    },
+    "FourthLayerTitleAnimationDelay": {
+      "type": "decimal"
+    },
+    "FourthLayerPara": {
+      "type": "text"
+    },
+    "FourthLayerParaAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "FourthLayerParaAnimationDuration": {
+      "type": "decimal"
+    },
+    "FourthLayerParaAnimationDelay": {
+      "type": "decimal"
+    },
+    "FourthLayerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "FourthLayerImageAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "FourthLayerImageAnimationDuration": {
+      "type": "decimal"
+    },
+    "FourthLayerImageAnimationDelay": {
+      "type": "decimal"
+    },
+    "FourthLayerTargetLink": {
+      "type": "string"
+    },
+    "FourthLayerAllTextColor": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "FifthLayer": {
+      "type": "enumeration",
+      "enum": [
+        "Fifth Layer"
+      ],
+      "default": "Fifth Layer",
+      "private": true
+    },
+    "FifthLayerTitle": {
+      "type": "string"
+    },
+    "FifthLayerTitleAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "FifthLayerTitleAnimationDuration": {
+      "type": "decimal"
+    },
+    "FifthLayerTitleAnimationDelay": {
+      "type": "decimal"
+    },
+    "FifthLayerPara": {
+      "type": "text"
+    },
+    "FifthLayerParaAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "FifthLayerParaAnimationDuration": {
+      "type": "decimal"
+    },
+    "FifthLayerParaAnimationDelay": {
+      "type": "decimal"
+    },
+    "FifthLayerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "FifthLayerImageAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "FifthLayerImageAnimationDuration": {
+      "type": "decimal"
+    },
+    "FifthLayerImageAnimationDelay": {
+      "type": "decimal"
+    },
+    "FifthLayerTargetLink": {
+      "type": "string"
+    },
+    "FifthLayerAllTextColor": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "SixLayer": {
+      "type": "enumeration",
+      "enum": [
+        "Sixth Layer"
+      ],
+      "default": "Sixth Layer",
+      "private": true
+    },
+    "SixthLayerTitle": {
+      "type": "string"
+    },
+    "SixthLayerTitleAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "SixthLayerTitleAnimationDuration": {
+      "type": "decimal"
+    },
+    "SixthLayerTitleAnimationDelay": {
+      "type": "decimal"
+    },
+    "SixthLayerPara": {
+      "type": "text"
+    },
+    "SixthLayerParaAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "SixthLayerParaAnimationDuration": {
+      "type": "decimal"
+    },
+    "SixthLayerParaAnimationDelay": {
+      "type": "decimal"
+    },
+    "SixthLayerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "SixthLayerImageAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "SixthLayerImageAnimationDuration": {
+      "type": "decimal"
+    },
+    "SixthLayerImageAnimationDelay": {
+      "type": "decimal"
+    },
+    "SixthLayerTargetLink": {
+      "type": "string"
+    },
+    "SixthLayerAllTextColor": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "SeventhLayer": {
+      "type": "enumeration",
+      "enum": [
+        "Seventh Layer"
+      ],
+      "private": true,
+      "default": "Seventh Layer"
+    },
+    "SeventhLayerTitle": {
+      "type": "string"
+    },
+    "SeventhLayerTitleAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "SeventhLayerTitleAnimationDuration": {
+      "type": "decimal"
+    },
+    "SeventhLayerTitleAnimationDelay": {
+      "type": "decimal"
+    },
+    "SeventhLayerPara": {
+      "type": "text"
+    },
+    "SeventhLayerParaAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "SeventhLayerParaAnimationDuration": {
+      "type": "decimal"
+    },
+    "SeventhLayerParaAnimationDelay": {
+      "type": "decimal"
+    },
+    "SeventhLayerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "SeventhLayerImageAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "SeventhLayerImageAnimationDuration": {
+      "type": "decimal"
+    },
+    "SeventhLayerImageAnimationDelay": {
+      "type": "decimal"
+    },
+    "SeventhLayerTargetLink": {
+      "type": "string"
+    },
+    "SeventhLayerAllTextColor": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "EighthLayer": {
+      "type": "enumeration",
+      "enum": [
+        "Eighth Layer"
+      ],
+      "default": "Eighth Layer",
+      "private": true
+    },
+    "EighthLayerTitle": {
+      "type": "string"
+    },
+    "EighthLayerTitleAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "EighthLayerTitleAnimationDuration": {
+      "type": "decimal"
+    },
+    "EighthLayerTitleAnimationDelay": {
+      "type": "decimal"
+    },
+    "EighthLayerPara": {
+      "type": "text"
+    },
+    "EighthLayerParaAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "EighthLayerParaAnimationDuration": {
+      "type": "decimal"
+    },
+    "EighthLayerParaAnimationDelay": {
+      "type": "decimal"
+    },
+    "EighthLayerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "EighthLayerImageAnimation": {
+      "type": "enumeration",
+      "enum": [
+        "drop",
+        "fade-in",
+        "fly-in-bottom",
+        "fly-in-left",
+        "fly-in-right",
+        "fly-in-top",
+        "pulse",
+        "rotate-in-left",
+        "rotate-in-right",
+        "twirl-in",
+        "whoosh-in-left",
+        "whoosh-in-right",
+        "pan-left",
+        "pan-right",
+        "pan-down",
+        "pan-up",
+        "zoom-in",
+        "zoom-out"
+      ]
+    },
+    "EighthLayerImageAnimationDuration": {
+      "type": "decimal"
+    },
+    "EighthLayerImageAnimationDelay": {
+      "type": "decimal"
+    },
+    "EighthLayerTargetLink": {
+      "type": "string"
+    },
+    "EighthLayerAllTextColor": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "StoryTitle": {
+      "type": "text"
+    },
+    "storytitleslug": {
+      "type": "uid",
+      "targetField": "StoryTitle"
+    }
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carcollections",
+  "info": {
+    "singularName": "carcollection",
+    "pluralName": "carcollections",
+    "displayName": "CarCollection",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CarName": {
+      "type": "string",
+      "required": false
+    },
+    "car_brands": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::car-brand.car-brand",
+      "inversedBy": "carcollections"
+    },
+    "kmpl": {
+      "type": "decimal",
+      "required": false
+    },
+    "CC": {
+      "type": "integer"
+    },
+    "Seater": {
+      "type": "integer"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos",
+        "audios",
+        "files"
+      ]
+    },
+    "allimg": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "required": false,
+      "targetField": "CarName"
+    },
+    "Showroomprice": {
+      "type": "integer",
+      "required": false
+    },
+    "vehicletypes": {
+      "type": "enumeration",
+      "enum": [
+        "Hatchback",
+        "Sedan",
+        "SUV",
+        "MUV",
+        "Luxury",
+        "Super Luxury",
+        "Convertible",
+        "Hybrid",
+        "Coupe",
+        "Pickup Truck",
+        "Minivan",
+        "Wagon",
+        "Sport Utilitie",
+        "Electric"
+      ],
+      "required": false
+    },
+    "car_models": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::carmodel.carmodel",
+      "mappedBy": "car_collections"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "priceRange": {
+      "type": "string"
+    },
+    "trendingCar": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ],
+      "default": "No"
+    },
+    "latestCar": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ],
+      "default": "No"
+    },
+    "uid": {
+      "type": "customField",
+      "customField": "plugin::strapi-advanced-uuid.uuid"
+    },
+    "ElectricCars": {
+      "type": "enumeration",
+      "enum": [
+        "Electric Cars"
+      ],
+      "default": "Electric Cars",
+      "private": true
+    },
+    "electricCar": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ],
+      "default": "No"
+    },
+    "SelectValue": {
+      "type": "enumeration",
+      "enum": [
+        "Popular",
+        "Upcoming",
+        "Latest",
+        "Popular/Latest"
+      ]
+    },
+    "CarColorImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::review.review",
+      "mappedBy": "car_collections"
+    },
+    "FuelType": {
+      "type": "enumeration",
+      "enum": [
+        "Diesel",
+        "Petrol",
+        "Electric",
+        "Hybrid",
+        "CNG"
+      ]
+    },
+    "CarColorThumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

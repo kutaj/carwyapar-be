@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "banners",
+  "info": {
+    "singularName": "banner",
+    "pluralName": "banners",
+    "displayName": "Banner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Path": {
+      "type": "string",
+      "private": true
+    },
+    "BannerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "PagePath": {
+      "type": "enumeration",
+      "enum": [
+        "/newcars",
+        "/compare-cars",
+        "/cars/slug",
+        "/latestcars",
+        "/usedCars",
+        "/used-car-dealers",
+        "/car-loan-emi-calculator",
+        "/rto-information",
+        "/car-value-calculator",
+        "/news/car-collection",
+        "/news/car-reviews"
+      ]
+    }
+  }
+}

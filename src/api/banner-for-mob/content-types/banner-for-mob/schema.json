@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "banner_for_mobs",
+  "info": {
+    "singularName": "banner-for-mob",
+    "pluralName": "banner-for-mobs",
+    "displayName": "BannerForMob",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bannerimage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "targetLink": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

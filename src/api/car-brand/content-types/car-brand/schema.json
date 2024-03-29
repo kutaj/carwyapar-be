@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "car_brands",
+  "info": {
+    "singularName": "car-brand",
+    "pluralName": "car-brands",
+    "displayName": "CarBrand",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "brandname": {
+      "type": "string",
+      "required": true
+    },
+    "carcollections": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::carcollection.carcollection",
+      "mappedBy": "car_brands"
+    },
+    "brandLogo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "car_value_calculators": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::car-value-calculator.car-value-calculator",
+      "mappedBy": "car_brands"
+    }
+  }
+}
