@@ -1805,8 +1805,8 @@ export interface ApiUsedcarUsedcar extends Schema.CollectionType {
     ownership: Attribute.String;
     registrationstate: Attribute.String;
     registrationcity: Attribute.String;
-    carprice: Attribute.Decimal;
-    mobilenumber: Attribute.Integer;
+    carprice: Attribute.BigInteger;
+    mobilenumber: Attribute.BigInteger;
     tests: Attribute.Relation<
       'api::usedcar.usedcar',
       'manyToMany',

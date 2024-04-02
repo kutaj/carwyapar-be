@@ -37,10 +37,10 @@
       "type": "string"
     },
     "carprice": {
-      "type": "decimal"
+      "type": "biginteger"
     },
     "mobilenumber": {
-      "type": "integer"
+      "type": "biginteger"
     },
     "tests": {
       "type": "relation",
