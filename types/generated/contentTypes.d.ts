@@ -1038,6 +1038,18 @@ export interface ApiCarNewsCarNews extends Schema.CollectionType {
           'uuid-format': '^\\d{6}$';
         }
       >;
+    Tag: Attribute.JSON &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          'Global Automotive News',
+          'Automotive News India',
+          'Electric Car News',
+          'Car Design News',
+          'Latest Car News',
+          'Automotive Industry Trends'
+        ]
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

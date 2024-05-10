@@ -43,6 +43,18 @@
         "uuid-format": "^\\d{6}$"
       },
       "customField": "plugin::strapi-advanced-uuid.uuid"
+    },
+    "Tag": {
+      "type": "customField",
+      "options": [
+        "Global Automotive News",
+        "Automotive News India",
+        "Electric Car News",
+        "Car Design News",
+        "Latest Car News",
+        "Automotive Industry Trends"
+      ],
+      "customField": "plugin::multi-select.multi-select"
     }
   }
 }
