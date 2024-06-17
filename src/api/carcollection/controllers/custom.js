@@ -1,5 +1,9 @@
 "use strict";
-
+const {
+  addPercentage,
+  getFactor,
+  getInsurancePercentage,
+} = require("./pricelogic");
 /**
  * car-varinat-price controller
  */
@@ -13,11 +17,12 @@ module.exports = createCoreController(
       const { data, meta } = await super.find(ctx);
       const req = ctx.request.URL.search;
       const filterUrl = decodeURIComponent(req.toString())?.split("&");
-      const parameterContainingPriceCIty = filterUrl
+      const reqSelectedState = filterUrl
         .find((param) => param.includes("price:"))
         ?.split(":")
         .slice(-1)
         .pop();
+
 
       if (data) {
         await Promise.all(
@@ -29,156 +34,62 @@ module.exports = createCoreController(
                 ...item.attributes,
                 car_models: {
                   data: filteredCarModels?.sort((a, b) => {
-                    const priceA =
-                      a?.attributes?.price?.[0]?.["Ex-ShowRoom-Price"] || 0;
-                    const priceB =
-                      b?.attributes?.price?.[0]?.["Ex-ShowRoom-Price"] || 0;
+                    const priceA = a?.attributes?.ExShowRoomPrice;
+                    const priceB = b?.attributes?.ExShowRoomPrice;
                     return priceA - priceB;
                   }),
                 },
               },
             };
 
-            const AllVarinatPrice = await Promise.all(
-              filteredCarModels?.map(async (variant) => {
-                const prices = (await variant?.attributes?.price) || [];
-                return prices?.filter(
-                  (price) => price?.CityName === parameterContainingPriceCIty
-                );
-              })
-            );
-            if (
-              AllVarinatPrice &&
-              AllVarinatPrice.length > 0 &&
-              updatedItem.attributes?.car_models?.data
-            ) {
-              updatedItem.attributes.car_models.data.forEach((model, index) => {
-                const variantPrice = AllVarinatPrice[index];
-                if (variantPrice.length > 0) {
-                  model.attributes.price = variantPrice;
-                }
-              });
-            }
+            updatedItem.attributes.car_models.data.forEach((model, index) => {
+              const exShowRoomPrice = Number(
+                model?.attributes?.ExShowRoomPrice
+              );
+              const fuelType = model?.attributes?.FuelType;
+              const modelname = model?.attributes?.modelname;
+              const displacement = model?.attributes?.Displacement;
 
+              const roadTaxPercentage = getFactor(
+                reqSelectedState,
+                fuelType,
+                exShowRoomPrice,
+                displacement
+              );
+              const insurancePercentage =
+                getInsurancePercentage(exShowRoomPrice);
+
+              const RoadTaxPrice = addPercentage(
+                exShowRoomPrice,
+                roadTaxPercentage
+              );
+              const insurancePrice = addPercentage(
+                exShowRoomPrice,
+                insurancePercentage
+              );
+              const OtherPrice = addPercentage(exShowRoomPrice, 1);
+              const onRoadPrice =
+                exShowRoomPrice + RoadTaxPrice + insurancePrice + OtherPrice;
+
+              model.attributes.price = [
+                {
+                  id: 70,
+                  Emi: 9831,
+                  RTO: RoadTaxPrice,
+                  Others: OtherPrice,
+                  CityName: "Ambala",
+                  StateName: reqSelectedState,
+                  Insurance: insurancePrice,
+                  "On-Road Price": onRoadPrice,
+                  "Ex-ShowRoom-Price": exShowRoomPrice,
+                },
+              ];
+            });
             return updatedItem;
           })
         );
       }
-
-      // if (data) {
-      //   await Promise.all(
-      //     data.map(async (item) => {
-      //       const filteredCarModels = item?.attributes?.car_models?.data;
-      //       const updatedItem = {
-      //         ...item,
-      //         attributes: {
-      //           ...item.attributes,
-      //           car_models: { data: filteredCarModels },
-      //         },
-      //       };
-
-      //       const AllVarinatPrice = await Promise.all(
-      //         filteredCarModels?.map(async (variant) => {
-      //           const prices = (await variant?.attributes?.price) || [];
-      //           return prices?.filter(
-      //             (price) => price?.CityName === parameterContainingPriceCIty
-      //           );
-      //         })
-      //       );
-      //       if (
-      //         AllVarinatPrice &&
-      //         AllVarinatPrice.length > 0 &&
-      //         updatedItem.attributes?.car_models?.data
-      //       ) {
-      //         updatedItem.attributes.car_models.data.forEach((model, index) => {
-      //           const variantPrice = AllVarinatPrice[index];
-      //           if (variantPrice.length > 0) {
-      //             model.attributes.price = variantPrice;
-      //           }
-      //         });
-      //       }
-
-      //       return updatedItem;
-      //     })
-      //   );
-      // }
-
-      // if (data) {
-      //         await Promise.all(
-      //           data?.value?.data.map(async (item) => {
-      //             const filteredCarModels = item?.attributes?.car_models?.data;
-      //             const updatedItem = {
-      //               ...item,
-      //               attributes: {
-      //                 ...item.attributes,
-      //                 car_models: { data: filteredCarModels },
-      //               },
-      //             };
-
-      //             const AllVarinatPrice = await Promise.all(
-      //               filteredCarModels?.map(async (variant) => {
-      //                 const prices = (await variant?.attributes?.price) || [];
-      //                 return prices?.filter(
-      //                   (price) => price?.CityName === 'Patna'
-      //                 );
-      //               })
-      //             );
-      //             if (
-      //               AllVarinatPrice &&
-      //               AllVarinatPrice.length > 0 &&
-      //               updatedItem.attributes?.car_models?.data
-      //             ) {
-      //               updatedItem.attributes.car_models.data.forEach((model, index) => {
-      //                 const variantPrice = AllVarinatPrice[index];
-      //                 if (variantPrice.length > 0) {
-      //                   model.attributes.price = variantPrice;
-      //                 }
-      //               });
-      //             }
-
-      //             return updatedItem;
-      //           })
-      //         );
-      //       }
-
-      // if (data) {
-      //   await Promise.all(
-      //     data.value.data.map(async (item) => {
-      //       const filteredCarModels = item.attributes.car_models.data;
-      //       const updatedItem = {
-      //         ...item,
-      //         attributes: {
-      //           ...item.attributes,
-      //           car_models: { data: filteredCarModels },
-      //         },
-      //       };
-
-      //       const AllVariantPrice = await Promise.all(
-      //         filteredCarModels.map(async (variant) => {
-      //           const prices = (await variant.attributes.price) || [];
-      //           const filteredPrices = prices.filter((price) => price.CityName === 'Patna');
-      //           // Sorting prices by Ex-ShowRoom-Price
-      //           // filteredPrices.sort((a, b) => a["Ex-ShowRoom-Price"] - b["Ex-ShowRoom-Price"]);
-      //           console.log(filteredPrices.sort((a, b) => a?.[0]?.["Ex-ShowRoom-Price"] - b?.[0]?.["Ex-ShowRoom-Price"]))
-      //           return filteredPrices;
-      //         })
-      //       );
-
-      //       if (AllVariantPrice && AllVariantPrice.length > 0 && updatedItem.attributes.car_models.data) {
-      //         updatedItem.attributes.car_models.data.forEach((model, index) => {
-      //           const variantPrice = AllVariantPrice[index];
-      //           if (variantPrice.length > 0) {
-      //             model.attributes.price = variantPrice;
-      //           }
-      //         });
-      //       }
-
-      //       return updatedItem;
-      //     })
-      //   );
-      // }
-
-      return { data, meta };
+      return { data, meta , reqSelectedState };
     },
 
     async comparecars(ctx, next) {
@@ -195,7 +106,7 @@ module.exports = createCoreController(
       // // );
       // const req = ctx.request.URL.search;
       // const filterUrl = decodeURIComponent(req.toString())?.split("&");
-      // const parameterContainingPriceCIty = filterUrl
+      // const reqSelectedState = filterUrl
       //   .find((param) => param.includes("price:"))
       //   ?.split(":")
       //   .slice(-1)
@@ -217,7 +128,7 @@ module.exports = createCoreController(
       //         filteredCarModels?.map(async (variant) => {
       //           const prices = (await variant?.attributes?.price) || [];
       //           return prices?.filter(
-      //             (price) => price?.CityName === parameterContainingPriceCIty
+      //             (price) => price?.CityName === reqSelectedState
       //           );
       //         })
       //       );

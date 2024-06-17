@@ -1363,10 +1363,10 @@ export interface ApiCarmodelCarmodel extends Schema.CollectionType {
     AdditionalFeaturesExterior: Attribute.Text;
     AdditionalFeaturesInfotainment: Attribute.Text;
     AlloyWheelSize: Attribute.String;
-    price: Attribute.JSON;
     uid: Attribute.UID &
       Attribute.CustomField<'plugin::strapi-advanced-uuid.uuid'>;
     modelnameslug: Attribute.UID<'api::carmodel.carmodel', 'modelname'>;
+    ExShowRoomPrice: Attribute.BigInteger;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

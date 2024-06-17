@@ -484,9 +484,6 @@
     "AlloyWheelSize": {
       "type": "string"
     },
-    "price": {
-      "type": "json"
-    },
     "uid": {
       "type": "customField",
       "customField": "plugin::strapi-advanced-uuid.uuid"
@@ -494,6 +491,9 @@
     "modelnameslug": {
       "type": "uid",
       "targetField": "modelname"
+    },
+    "ExShowRoomPrice": {
+      "type": "biginteger"
     }
   }
 }
