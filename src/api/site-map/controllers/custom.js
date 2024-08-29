@@ -24,6 +24,12 @@ module.exports = createCoreController(
       const data = await strapi.entityService.findMany(
         "api::carcollection.carcollection",
         {
+          publicationState: "preview",
+          filters: {
+            publishedAt: {
+              $null: false,
+            },
+          },
           fields: ["slug", "updatedAt"],
           sort: { updatedAt: "desc" },
         }
