@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_maps",
+  "info": {
+    "singularName": "site-map",
+    "pluralName": "site-maps",
+    "displayName": "SiteMap"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "condition": {
+      "type": "boolean"
+    }
+  }
+}

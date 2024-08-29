@@ -1644,6 +1644,36 @@ export interface ApiReviewReview extends Schema.CollectionType {
   };
 }
 
+export interface ApiSiteMapSiteMap extends Schema.SingleType {
+  collectionName: 'site_maps';
+  info: {
+    singularName: 'site-map';
+    pluralName: 'site-maps';
+    displayName: 'SiteMap';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    condition: Attribute.Boolean;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::site-map.site-map',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::site-map.site-map',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTestTest extends Schema.CollectionType {
   collectionName: 'tests';
   info: {
@@ -2601,6 +2631,7 @@ declare module '@strapi/types' {
       'api::offer-card-for-mob.offer-card-for-mob': ApiOfferCardForMobOfferCardForMob;
       'api::offer-mini-card-for-mob.offer-mini-card-for-mob': ApiOfferMiniCardForMobOfferMiniCardForMob;
       'api::review.review': ApiReviewReview;
+      'api::site-map.site-map': ApiSiteMapSiteMap;
       'api::test.test': ApiTestTest;
       'api::used-car-dealer-city.used-car-dealer-city': ApiUsedCarDealerCityUsedCarDealerCity;
       'api::used-car-dealer-ship.used-car-dealer-ship': ApiUsedCarDealerShipUsedCarDealerShip;
