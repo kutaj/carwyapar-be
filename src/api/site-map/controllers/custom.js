@@ -18,7 +18,7 @@ module.exports = createCoreController(
       } = await super.find(ctx);
 
       if (!siteMap) {
-        return { sitemapData: [], siteMap };
+        return { sitemapData: [] };
       }
 
       const data = await strapi.entityService.findMany(
@@ -43,6 +43,46 @@ module.exports = createCoreController(
       const totalRows = cleanedData.length;
       const sitemapData = cleanedData.map((post, index) => ({
         loc: "/new-cars/" + post.slug,
+        lastmod: post.updatedAt,
+        changefreq: determineChangefreq(post.updatedAt),
+        priority: determinePriority(index + 1, totalRows),
+      }));
+
+      return sitemapData;
+    },
+    async carnews(ctx) {
+      const {
+        data: {
+          attributes: { condition: siteMap },
+        },
+      } = await super.find(ctx);
+
+      if (!siteMap) {
+        return { sitemapData: [] };
+      }
+
+      const data = await strapi.entityService.findMany(
+        "api::car-news.car-news",
+        {
+          publicationState: "preview",
+          filters: {
+            publishedAt: {
+              $null: false,
+            },
+          },
+          fields: ["titleslug", "updatedAt","uid"],
+          sort: { updatedAt: "desc" },
+        }
+      );
+
+      const cleanedData = data.map((item) => {
+        const { id, ...rest } = item;
+        return rest;
+      });
+
+      const totalRows = cleanedData.length;
+      const sitemapData = cleanedData.map((post, index) => ({
+        loc: "/news/india-car-news/" + post.titleslug + '-' + post.uid,
         lastmod: post.updatedAt,
         changefreq: determineChangefreq(post.updatedAt),
         priority: determinePriority(index + 1, totalRows),
