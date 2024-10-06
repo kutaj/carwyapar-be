@@ -6,10 +6,14 @@
 
 const { createCoreController } = require("@strapi/strapi").factories;
 const { determineChangefreq, determinePriority } = require("./logic");
+const { indexData } = require("./comman");
 
 module.exports = createCoreController(
   "api::site-map.site-map",
   ({ strapi }) => ({
+    async carwyapar(ctx) {
+      return indexData;
+    },
     async newcars(ctx) {
       const {
         data: {
@@ -70,7 +74,7 @@ module.exports = createCoreController(
               $null: false,
             },
           },
-          fields: ["titleslug", "updatedAt","uid"],
+          fields: ["titleslug", "updatedAt", "uid"],
           sort: { updatedAt: "desc" },
         }
       );
@@ -82,7 +86,7 @@ module.exports = createCoreController(
 
       const totalRows = cleanedData.length;
       const sitemapData = cleanedData.map((post, index) => ({
-        loc: "/news/india-car-news/" + post.titleslug + '-' + post.uid,
+        loc: "/news/india-car-news/" + post.titleslug + "-" + post.uid,
         lastmod: post.updatedAt,
         changefreq: determineChangefreq(post.updatedAt),
         priority: determinePriority(index + 1, totalRows),

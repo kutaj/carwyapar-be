@@ -2,6 +2,11 @@ module.exports = {
     routes: [
       { 
         method: 'GET',
+        path: '/site-map-carwyapar', 
+        handler: 'custom.carwyapar',
+      },
+      { 
+        method: 'GET',
         path: '/site-map-newcars', 
         handler: 'custom.newcars',
       },
