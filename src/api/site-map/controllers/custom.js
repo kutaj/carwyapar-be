@@ -46,7 +46,7 @@ module.exports = createCoreController(
 
       const totalRows = cleanedData.length;
       const sitemapData = cleanedData.map((post, index) => ({
-        loc: "/new-cars/" + post.slug,
+        loc: "/new-car/" + post.slug,
         lastmod: post.updatedAt,
         changefreq: determineChangefreq(post.updatedAt),
         priority: determinePriority(index + 1, totalRows),
