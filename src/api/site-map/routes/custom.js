@@ -14,6 +14,11 @@ module.exports = {
         method: 'GET',
         path: '/site-map-carnews', 
         handler: 'custom.carnews',
+      },
+      { 
+        method: 'GET',
+        path: '/site-map-comparecars', 
+        handler: 'custom.comparecars',
       }
     ]
   }
