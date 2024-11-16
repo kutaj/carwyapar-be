@@ -19,6 +19,16 @@ module.exports = {
         method: 'GET',
         path: '/site-map-comparecars', 
         handler: 'custom.comparecars',
-      }
+      },
+      // { 
+      //   method: 'GET',
+      //   path: '/site-map-comparecars-variant', 
+      //   handler: 'custom.comparecarsvariant',
+      // }
+      { 
+        method: 'GET',
+        path: '/site-map-new-cars-filter-by-brand', 
+        handler: 'custom.newcarsftbrand',
+      },
     ]
   }
