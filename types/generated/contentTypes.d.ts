@@ -1264,9 +1264,9 @@ export interface ApiCarmodelCarmodel extends Schema.CollectionType {
       ['Diesel', 'Petrol', 'Electric', 'Hybrid', 'CNG']
     >;
     MileageKMPL: Attribute.String;
-    EngineAndTransmission: Attribute.Enumeration<['Engine And Transmission']> &
+    Engine: Attribute.Enumeration<['Engine']> &
       Attribute.Private &
-      Attribute.DefaultTo<'Engine And Transmission'>;
+      Attribute.DefaultTo<'Engine'>;
     GeneralSpecifications: Attribute.Enumeration<['General Specifications']> &
       Attribute.Private &
       Attribute.DefaultTo<'General Specifications'>;
@@ -1367,6 +1367,41 @@ export interface ApiCarmodelCarmodel extends Schema.CollectionType {
       Attribute.CustomField<'plugin::strapi-advanced-uuid.uuid'>;
     modelnameslug: Attribute.UID<'api::carmodel.carmodel', 'modelname'>;
     ExShowRoomPrice: Attribute.BigInteger;
+    DimensionsAndSeating: Attribute.Enumeration<['Dimensions & Seating']> &
+      Attribute.Private &
+      Attribute.DefaultTo<'Dimensions & Seating'>;
+    Fuel: Attribute.Enumeration<['Fuel']> &
+      Attribute.Private &
+      Attribute.DefaultTo<'Fuel'>;
+    Transmission: Attribute.Enumeration<['Transmission']> &
+      Attribute.Private &
+      Attribute.DefaultTo<'Transmission'>;
+    SteeringSuspensionBrakes: Attribute.Enumeration<
+      ['Steering, Suspension & Brakes']
+    > &
+      Attribute.Private &
+      Attribute.DefaultTo<'Steering, Suspension & Brakes'>;
+    SafetyAndSecurity: Attribute.Enumeration<['Safety & Security']> &
+      Attribute.Private &
+      Attribute.DefaultTo<'Safety & Security'>;
+    ADAS: Attribute.Enumeration<['ADAS']> &
+      Attribute.Private &
+      Attribute.DefaultTo<'ADAS'>;
+    ComfortAndConvineience: Attribute.Enumeration<
+      ['Comfort and Convineience ']
+    > &
+      Attribute.Private &
+      Attribute.DefaultTo<'Comfort and Convineience '>;
+    InfotainmentAndInstrumentCluster: Attribute.Enumeration<
+      ['Infotainment & Instrument Cluster']
+    > &
+      Attribute.Private &
+      Attribute.DefaultTo<'Infotainment & Instrument Cluster'>;
+    ConnectivityAndTelematics: Attribute.Enumeration<
+      ['Connectivity & Telematics']
+    > &
+      Attribute.Private &
+      Attribute.DefaultTo<'Connectivity & Telematics'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

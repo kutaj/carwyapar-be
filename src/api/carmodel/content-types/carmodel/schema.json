@@ -52,13 +52,13 @@
     "MileageKMPL": {
       "type": "string"
     },
-    "EngineAndTransmission": {
+    "Engine": {
       "type": "enumeration",
       "enum": [
-        "Engine And Transmission"
+        "Engine"
       ],
       "private": true,
-      "default": "Engine And Transmission"
+      "default": "Engine"
     },
     "GeneralSpecifications": {
       "type": "enumeration",
@@ -242,8 +242,8 @@
       "enum": [
         "Interior"
       ],
-      "private": true,
-      "default": "Interior"
+      "default": "Interior",
+      "private": true
     },
     "FrontPowerWindows": {
       "type": "enumeration",
@@ -494,6 +494,78 @@
     },
     "ExShowRoomPrice": {
       "type": "biginteger"
+    },
+    "DimensionsAndSeating": {
+      "type": "enumeration",
+      "enum": [
+        "Dimensions & Seating"
+      ],
+      "default": "Dimensions & Seating",
+      "private": true
+    },
+    "Fuel": {
+      "type": "enumeration",
+      "enum": [
+        "Fuel"
+      ],
+      "default": "Fuel",
+      "private": true
+    },
+    "Transmission": {
+      "type": "enumeration",
+      "enum": [
+        "Transmission"
+      ],
+      "default": "Transmission",
+      "private": true
+    },
+    "SteeringSuspensionBrakes": {
+      "type": "enumeration",
+      "enum": [
+        "Steering, Suspension & Brakes"
+      ],
+      "default": "Steering, Suspension & Brakes",
+      "private": true
+    },
+    "SafetyAndSecurity": {
+      "type": "enumeration",
+      "enum": [
+        "Safety & Security"
+      ],
+      "default": "Safety & Security",
+      "private": true
+    },
+    "ADAS": {
+      "type": "enumeration",
+      "enum": [
+        "ADAS"
+      ],
+      "default": "ADAS",
+      "private": true
+    },
+    "ComfortAndConvineience": {
+      "type": "enumeration",
+      "enum": [
+        "Comfort and Convineience "
+      ],
+      "default": "Comfort and Convineience ",
+      "private": true
+    },
+    "InfotainmentAndInstrumentCluster": {
+      "type": "enumeration",
+      "enum": [
+        "Infotainment & Instrument Cluster"
+      ],
+      "default": "Infotainment & Instrument Cluster",
+      "private": true
+    },
+    "ConnectivityAndTelematics": {
+      "type": "enumeration",
+      "enum": [
+        "Connectivity & Telematics"
+      ],
+      "default": "Connectivity & Telematics",
+      "private": true
     }
   }
 }
