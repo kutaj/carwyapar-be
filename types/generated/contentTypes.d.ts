@@ -1257,7 +1257,6 @@ export interface ApiCarmodelCarmodel extends Schema.CollectionType {
     Height: Attribute.String;
     WheelBase: Attribute.String;
     GroundClearance: Attribute.String;
-    TyreSize: Attribute.String;
     Doors: Attribute.Integer;
     SeatingCapacity: Attribute.Integer;
     FuelType: Attribute.Enumeration<
@@ -1384,9 +1383,7 @@ export interface ApiCarmodelCarmodel extends Schema.CollectionType {
     SafetyAndSecurity: Attribute.Enumeration<['Safety & Security']> &
       Attribute.Private &
       Attribute.DefaultTo<'Safety & Security'>;
-    ADAS: Attribute.Enumeration<['ADAS']> &
-      Attribute.Private &
-      Attribute.DefaultTo<'ADAS'>;
+    ADAS: Attribute.Enumeration<['Yes', 'No']>;
     ComfortAndConvineience: Attribute.Enumeration<
       ['Comfort and Convineience ']
     > &
@@ -1402,6 +1399,67 @@ export interface ApiCarmodelCarmodel extends Schema.CollectionType {
     > &
       Attribute.Private &
       Attribute.DefaultTo<'Connectivity & Telematics'>;
+    BootSpace: Attribute.BigInteger;
+    FuelTankCapacity: Attribute.BigInteger;
+    Range: Attribute.BigInteger;
+    PowertrainAssistance: Attribute.Enumeration<
+      ['Mild Hybrid', 'Strong Hybrid']
+    >;
+    MotorType: Attribute.String;
+    BatteryType: Attribute.String;
+    BatteryCapacity: Attribute.String;
+    TopSpeed: Attribute.String;
+    Drivetrain: Attribute.Enumeration<['FWD', 'RWD', 'AWD', 'FourXFour']>;
+    TurningRadius: Attribute.String;
+    RegenerativeBraking: Attribute.Enumeration<['Yes', 'No']>;
+    SeatBeltWarning: Attribute.Enumeration<['Yes', 'No']>;
+    ESP: Attribute.Enumeration<['Yes', 'No']>;
+    HillDescentControl: Attribute.Enumeration<['Yes', 'No']>;
+    ReverseCamera: Attribute.Enumeration<['Yes', 'No']>;
+    OCamera: Attribute.Enumeration<['Yes', 'No']>;
+    EngineImmobilizer: Attribute.Enumeration<['Yes', 'No']>;
+    AdaptiveCruiseControl: Attribute.Enumeration<['Yes', 'No']>;
+    ForwardCollisionWarning: Attribute.Enumeration<['Yes', 'No']>;
+    DriverAttentionWarning: Attribute.Enumeration<['Yes', 'No']>;
+    BlindSpotMonitor: Attribute.Enumeration<['Yes', 'No']>;
+    AutomaticEmergencyBraking: Attribute.Enumeration<['Yes', 'No']>;
+    LaneKeepAssistance: Attribute.Enumeration<['Yes', 'No']>;
+    KeylessEntry: Attribute.Enumeration<['Yes', 'No']>;
+    RequestSensors: Attribute.Enumeration<['Yes', 'No']>;
+    PushButtonStart: Attribute.Enumeration<['Yes', 'No']>;
+    AutomaticClimateControl: Attribute.Enumeration<['Yes', 'No']>;
+    RearACVents: Attribute.Enumeration<['Yes', 'No']>;
+    CruiseControl: Attribute.Enumeration<['Yes', 'No']>;
+    SteeringMountedControl: Attribute.Enumeration<['Yes', 'No']>;
+    TiltSteeringAdjust: Attribute.Enumeration<['Yes', 'No']>;
+    TelescopicSteeringAdjust: Attribute.Enumeration<['Yes', 'No']>;
+    DriverSeatAdjustment: Attribute.Enumeration<['Manual', 'Electric']>;
+    DriverSeatHeightAdjustment: Attribute.Enumeration<['Yes', 'No']>;
+    CoDriverSeatAdjustment: Attribute.Enumeration<['Manual', 'Electric']>;
+    CoDriverSeatHeightAdjustment: Attribute.Enumeration<['Yes', 'No']>;
+    VentilatedSeats: Attribute.Enumeration<['Yes', 'No']>;
+    HeatedSeats: Attribute.Enumeration<['Yes', 'No']>;
+    WirelessCharging: Attribute.Enumeration<['Yes', 'No']>;
+    PowerOutlets: Attribute.Enumeration<['Yes', 'No']>;
+    ChargingPorts: Attribute.Enumeration<['Yes', 'No']>;
+    ORVMAdjustment: Attribute.Enumeration<['Manual', 'Electric']>;
+    PaddleShifters: Attribute.Enumeration<['Yes', 'No', 'Not Compatible']>;
+    Upholstery: Attribute.Enumeration<
+      ['Fabric', 'Faux Leather', 'Leather', 'Suede/Alcantara']
+    >;
+    Sunroof: Attribute.Enumeration<
+      ['Standard', 'Panoramic', 'Moonroof', 'No', 'Not Compatible']
+    >;
+    FrontSeatArmRest: Attribute.Enumeration<['Yes', 'No']>;
+    CupHoldersFront: Attribute.Enumeration<['Yes', 'No']>;
+    CupHoldersRear: Attribute.Enumeration<['Yes', 'No']>;
+    RearReadingLights: Attribute.Enumeration<['Yes', 'No']>;
+    RearParcelTray: Attribute.Enumeration<['Yes', 'No']>;
+    CooledGlovebox: Attribute.Enumeration<['Yes', 'No']>;
+    SeatPockets: Attribute.Enumeration<['Yes', 'No']>;
+    SunglassHolder: Attribute.Enumeration<['Yes', 'No']>;
+    RearSeatFolding: Attribute.Enumeration<['Full', 'Split', 'No']>;
+    Wheels: Attribute.Enumeration<['Steel Rims', 'Alloy', 'Diamond Cut Alloy']>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

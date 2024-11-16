@@ -30,9 +30,6 @@
     "GroundClearance": {
       "type": "string"
     },
-    "TyreSize": {
-      "type": "string"
-    },
     "Doors": {
       "type": "integer"
     },
@@ -538,10 +535,9 @@
     "ADAS": {
       "type": "enumeration",
       "enum": [
-        "ADAS"
-      ],
-      "default": "ADAS",
-      "private": true
+        "Yes",
+        "No"
+      ]
     },
     "ComfortAndConvineience": {
       "type": "enumeration",
@@ -566,6 +562,369 @@
       ],
       "default": "Connectivity & Telematics",
       "private": true
+    },
+    "BootSpace": {
+      "type": "biginteger"
+    },
+    "FuelTankCapacity": {
+      "type": "biginteger"
+    },
+    "Range": {
+      "type": "biginteger"
+    },
+    "PowertrainAssistance": {
+      "type": "enumeration",
+      "enum": [
+        "Mild Hybrid",
+        "Strong Hybrid"
+      ]
+    },
+    "MotorType": {
+      "type": "string"
+    },
+    "BatteryType": {
+      "type": "string"
+    },
+    "BatteryCapacity": {
+      "type": "string"
+    },
+    "TopSpeed": {
+      "type": "string"
+    },
+    "Drivetrain": {
+      "type": "enumeration",
+      "enum": [
+        "FWD",
+        "RWD",
+        "AWD",
+        "FourXFour"
+      ]
+    },
+    "TurningRadius": {
+      "type": "string"
+    },
+    "RegenerativeBraking": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "SeatBeltWarning": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "ESP": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "HillDescentControl": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "ReverseCamera": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "OCamera": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "EngineImmobilizer": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "AdaptiveCruiseControl": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "ForwardCollisionWarning": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "DriverAttentionWarning": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "BlindSpotMonitor": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "AutomaticEmergencyBraking": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "LaneKeepAssistance": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "KeylessEntry": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "RequestSensors": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "PushButtonStart": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "AutomaticClimateControl": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "RearACVents": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "CruiseControl": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "SteeringMountedControl": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "TiltSteeringAdjust": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "TelescopicSteeringAdjust": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "DriverSeatAdjustment": {
+      "type": "enumeration",
+      "enum": [
+        "Manual",
+        "Electric"
+      ]
+    },
+    "DriverSeatHeightAdjustment": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "CoDriverSeatAdjustment": {
+      "type": "enumeration",
+      "enum": [
+        "Manual",
+        "Electric"
+      ]
+    },
+    "CoDriverSeatHeightAdjustment": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "VentilatedSeats": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "HeatedSeats": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "WirelessCharging": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "PowerOutlets": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "ChargingPorts": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "ORVMAdjustment": {
+      "type": "enumeration",
+      "enum": [
+        "Manual",
+        "Electric"
+      ]
+    },
+    "PaddleShifters": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No",
+        "Not Compatible"
+      ]
+    },
+    "Upholstery": {
+      "type": "enumeration",
+      "enum": [
+        "Fabric",
+        "Faux Leather",
+        "Leather",
+        "Suede/Alcantara"
+      ]
+    },
+    "Sunroof": {
+      "type": "enumeration",
+      "enum": [
+        "Standard",
+        "Panoramic",
+        "Moonroof",
+        "No",
+        "Not Compatible"
+      ]
+    },
+    "FrontSeatArmRest": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "CupHoldersFront": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "CupHoldersRear": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "RearReadingLights": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "RearParcelTray": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "CooledGlovebox": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "SeatPockets": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "SunglassHolder": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "RearSeatFolding": {
+      "type": "enumeration",
+      "enum": [
+        "Full",
+        "Split",
+        "No"
+      ]
+    },
+    "Wheels": {
+      "type": "enumeration",
+      "enum": [
+        "Steel Rims",
+        "Alloy",
+        "Diamond Cut Alloy"
+      ]
     }
   }
 }
