@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "compar_cars",
+  "info": {
+    "singularName": "compar-car",
+    "pluralName": "compar-cars",
+    "displayName": "ComparCars"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "car_collections": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::carcollection.carcollection",
+      "inversedBy": "compar_cars"
+    }
+  }
+}

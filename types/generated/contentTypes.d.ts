@@ -1221,6 +1221,11 @@ export interface ApiCarcollectionCarcollection extends Schema.CollectionType {
       ['Diesel', 'Petrol', 'Electric', 'Hybrid', 'CNG']
     >;
     CarColorThumbnail: Attribute.Media;
+    compar_cars: Attribute.Relation<
+      'api::carcollection.carcollection',
+      'manyToMany',
+      'api::compar-car.compar-car'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1506,6 +1511,40 @@ export interface ApiColorColor extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::color.color',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiComparCarComparCar extends Schema.CollectionType {
+  collectionName: 'compar_cars';
+  info: {
+    singularName: 'compar-car';
+    pluralName: 'compar-cars';
+    displayName: 'ComparCars';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    car_collections: Attribute.Relation<
+      'api::compar-car.compar-car',
+      'manyToMany',
+      'api::carcollection.carcollection'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::compar-car.compar-car',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::compar-car.compar-car',
       'oneToOne',
       'admin::user'
     > &
@@ -2720,6 +2759,7 @@ declare module '@strapi/types' {
       'api::carcollection.carcollection': ApiCarcollectionCarcollection;
       'api::carmodel.carmodel': ApiCarmodelCarmodel;
       'api::color.color': ApiColorColor;
+      'api::compar-car.compar-car': ApiComparCarComparCar;
       'api::dealer-ship.dealer-ship': ApiDealerShipDealerShip;
       'api::offer-card-for-mob.offer-card-for-mob': ApiOfferCardForMobOfferCardForMob;
       'api::offer-mini-card-for-mob.offer-mini-card-for-mob': ApiOfferMiniCardForMobOfferMiniCardForMob;
