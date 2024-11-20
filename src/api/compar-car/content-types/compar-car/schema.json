@@ -4,7 +4,8 @@
   "info": {
     "singularName": "compar-car",
     "pluralName": "compar-cars",
-    "displayName": "ComparCars"
+    "displayName": "ComparCars",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +17,13 @@
       "relation": "manyToMany",
       "target": "api::carcollection.carcollection",
       "inversedBy": "compar_cars"
+    },
+    "Tag": {
+      "type": "enumeration",
+      "enum": [
+        "Latest",
+        "Popular"
+      ]
     }
   }
 }

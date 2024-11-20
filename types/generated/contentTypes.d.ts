@@ -1524,6 +1524,7 @@ export interface ApiComparCarComparCar extends Schema.CollectionType {
     singularName: 'compar-car';
     pluralName: 'compar-cars';
     displayName: 'ComparCars';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1534,6 +1535,7 @@ export interface ApiComparCarComparCar extends Schema.CollectionType {
       'manyToMany',
       'api::carcollection.carcollection'
     >;
+    Tag: Attribute.Enumeration<['Latest', 'Popular']>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
