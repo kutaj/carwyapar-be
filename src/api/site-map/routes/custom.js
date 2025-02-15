@@ -27,8 +27,13 @@ module.exports = {
       // }
       { 
         method: 'GET',
-        path: '/site-map-new-cars-filter-by-brand', 
-        handler: 'custom.newcarsftbrand',
+        path: '/site-map-tools', 
+        handler: 'custom.tools',
+      },
+      { 
+        method: 'GET',
+        path: '/site-map-info', 
+        handler: 'custom.info',
       },
     ]
   }

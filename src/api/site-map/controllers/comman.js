@@ -6,7 +6,7 @@ beforeOneDate.setDate(beforeOneDate.getDate() - 1);
 const formattedBeforeOneDate = beforeOneDate.toISOString();
 
 const highPriority = [
-  { loc: `/`, changefreq: "hourly", priority: "1", lastmod: date },
+  { loc: ``, changefreq: "hourly", priority: "1", lastmod: date },
   { loc: `/new-cars`, changefreq: "hourly", priority: "1", lastmod: date },
   { loc: `/sell-your-car`, changefreq: "hourly", priority: "1", lastmod: date },
   { loc: `/latestcars`, changefreq: "hourly", priority: "1", lastmod: date },
@@ -14,10 +14,7 @@ const highPriority = [
   { loc: `/used-cars`, changefreq: "hourly", priority: "1", lastmod: date },
 ];
 
-const calculators = [
-  { loc: `/car-value-calculator`, changefreq: "weekly", priority: "0.9", lastmod: formattedBeforeOneDate },
-  { loc: `/car-loan-emi-calculator`, changefreq: "weekly", priority: "0.9", lastmod: formattedBeforeOneDate },
-  { loc: `/rto-information`, changefreq: "weekly", priority: "0.9", lastmod: formattedBeforeOneDate },
+const info = [
   { loc: `/about-us`, changefreq: "hourly", priority: "0.9", lastmod: formattedBeforeOneDate },
   { loc: `/terms-of-use`, changefreq: "hourly", priority: "0.9", lastmod: formattedBeforeOneDate },
   { loc: `/privacy-policy`, changefreq: "hourly", priority: "0.9", lastmod: formattedBeforeOneDate },
@@ -26,17 +23,23 @@ const calculators = [
   { loc: `/contact-us`, changefreq: "hourly", priority: "0.9", lastmod: formattedBeforeOneDate },
 ];
 
-const siteMaps = [
-  ...highPriority,
-  ...calculators,
-
+const tools = [
+  { loc: `/car-value-calculator`, changefreq: "hourly", priority: "0.9", lastmod: formattedBeforeOneDate },
+  { loc: `/car-loan-emi-calculator`, changefreq: "hourly", priority: "0.9", lastmod: formattedBeforeOneDate },
+  { loc: `/rto-information`, changefreq: "hourly", priority: "0.9", lastmod: formattedBeforeOneDate },
 ];
 
-const indexData = siteMaps.map((p) => ({
-  loc: p.loc,
+const siteMaps = [
+  ...highPriority,
+  ...info,
+  ...tools,
+];
+
+const formattedSiteMaps = siteMaps.map((p) => ({
+  loc: `${baseUrl}${p.loc}`,
   lastmod: p.lastmod,
   changefreq: p.changefreq,
   priority: p.priority,
 }));
 
-module.exports = {indexData};
+module.exports = { highPriority, info, tools, siteMaps: formattedSiteMaps };

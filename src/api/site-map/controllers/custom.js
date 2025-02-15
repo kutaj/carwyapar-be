@@ -6,13 +6,19 @@
 
 const { createCoreController } = require("@strapi/strapi").factories;
 const { determineChangefreq, determinePriority } = require("./logic");
-const { indexData } = require("./comman");
+const { highPriority ,tools,info} = require("./comman");
 
 module.exports = createCoreController(
   "api::site-map.site-map",
   ({ strapi }) => ({
     async carwyapar(ctx) {
-      return indexData;
+      return highPriority;
+    },
+    async tools(ctx) {
+      return tools;
+    },
+    async info(ctx) {
+      return info;
     },
     async newcars(ctx) {
       const {
